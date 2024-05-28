@@ -1,0 +1,136 @@
+
+/*==============Part Elemen Carousal 1=================*/
+.carousel_satu {
+    position: relative;
+    top: 170px;
+    width: 1220px;
+    height: 302px;
+    border-radius: 0.4rem;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+.track_satu {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+.slide_satu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 2rem;
+    background: white;
+}
+
+.prev_satu,
+.next_satu {
+    position: absolute;
+    top: 50%;
+    border: none;
+    font-size: 2rem;
+    background: none;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+button:hover {
+    background: rgb(0, 0, 0, 0.1);
+}
+
+.prev_satu {
+    left: 0;
+}
+
+.next_satu {
+    right: 0;
+}
+
+/* CSS for dots */
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    /* Mengatur posisi di bawah paling kiri */
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(11, 238, 30, 0.5);
+    /* Mengatur warna dot */
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    /* Mengatur transisi yang lambat */
+    z-index: 900;
+}
+
+.dot:last-child {
+    margin-right: 0;
+    /* Menghilangkan margin-right dari dot terakhir */
+
+}
+
+/* CSS for active dot */
+.dot.active {
+    background-color: rgb(60, 255, 11);
+    /* Mengubah warna dot yang aktif */
+}
+
+.prev_satu,
+.next_satu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgb(248, 248, 248);
+    border: none;
+    font-size: 24px;
+    color: rgb(60, 255, 11);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 900;
+    opacity: 0;
+    /* Sembunyikan tombol secara default */
+    transition: opacity 0.3s ease;
+    /* Animasi untuk opacity */
+}
+
+.prev_satu {
+    left: 10px;
+}
+
+.next_satu {
+    right: 10px;
+}
+
+.carousel_satu:hover .prev_satu,
+.carousel_satu:hover .next_satu {
+    opacity: 1;
+    transition: 0.5s;
+    /* Tampilkan tombol saat kursor hover di area carousel */
+}
+
+
+
+
+
+
+
+
+
+
+
